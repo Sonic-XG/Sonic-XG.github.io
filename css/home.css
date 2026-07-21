@@ -1,0 +1,349 @@
+@font-face {
+    font-family: "Vipnagorgialla";
+    src: url("../fonts/vipna-bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Vipnagorgialla";
+    src: url("../fonts/vipna-reg.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Agdasima";
+    src: url("../fonts/agdasima-reg.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Agdasima";
+    src: url("../fonts/agdasima-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ChaotixFont";
+    src: url("../fonts/chaotix.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --titlebar-gray: #333333;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    background-image:
+        url("../assets/border_r.png"), url("../assets/border_l.png"),
+        url("../assets/border_r2.png"), url("../assets/border_l2.png"),
+        url("../assets/bg_logo.png");
+    background-repeat: repeat-y, repeat-y, repeat-y, repeat-y, no-repeat;
+    background-attachment: fixed;
+    background-position:
+        right top,
+        left top,
+        right 48px top,
+        left 48px top,
+        center;
+}
+
+nav {
+    background-color: var(--titlebar-gray);
+    width: 100%;
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+}
+
+#logo-link {
+    position: relative;
+    width: 224px;
+    height: 1px;
+}
+
+#navbar-logo {
+    position: absolute;
+    left: 24px;
+    height: 5rem;
+    width: auto;
+    top: 100%;
+    transform: translateY(20%);
+    z-index: 10;
+}
+
+#navbar-logo:hover {
+    transform: translateY(25%);
+    filter: drop-shadow(-1px -1px 0px black) drop-shadow(1px -1px 0px black)
+        drop-shadow(-1px 1px 0px black) drop-shadow(1px 1px 0px black)
+        drop-shadow(2px 2px 0px black) drop-shadow(-3px -1px 0px white)
+        drop-shadow(3px -1px 0px white) drop-shadow(-3px 3px 0px white)
+        drop-shadow(3px 3px 0px white);
+}
+
+.chaotix-font {
+    filter: drop-shadow(-1px -1px 0px black) drop-shadow(1px -1px 0px black)
+        drop-shadow(-1px 1px 0px black) drop-shadow(1px 1px 0px black)
+        drop-shadow(2px 2px 0px black);
+}
+
+nav a:hover {
+    transform: translateY(5%);
+}
+
+.chaotix-font {
+    padding: 20px;
+    text-decoration: none;
+    font-family: "ChaotixFont", sans-serif;
+    font-size: 1.75em;
+    text-decoration: none;
+    line-height: 1;
+    background-clip: text;
+    color: transparent !important;
+    background-image: linear-gradient(
+        to bottom,
+        #505050 0%,
+        #505050 58%,
+        #303030 58%,
+        #303030 100%
+    );
+}
+
+.chaotix-font:hover,
+.chaotix-font.nav-active,
+.download-link a {
+    background-image: linear-gradient(
+        to bottom,
+        #f0f000 0%,
+        #f0f000 35%,
+        #f0f0f0 35%,
+        #f0f0f0 42%,
+        #f0f000 42%,
+        #f0f000 58%,
+        #f0c000 58%,
+        #f0c000 65%,
+        #e08000 65%,
+        #e08000 100%
+    );
+    cursor: pointer;
+}
+
+.chaotix-font.nav-active:hover,
+.download-link a:hover {
+    background-image: linear-gradient(
+        to bottom,
+        #f0f0f0 0%,
+        #f0f0f0 58%,
+        #f0f000 58%,
+        #f0f000 65%,
+        #f0c000 65%,
+        #f0c000 100%
+    );
+}
+
+footer {
+    display: flex;
+    margin: 20px 200px 50px 200px;
+    gap: 20px;
+    align-items: center;
+}
+
+footer p {
+    font-family: "Vipnagorgialla";
+    font-size: 75%;
+    color: #999999;
+}
+
+footer img {
+    width: 150px;
+}
+
+footer a img {
+    width: min(60px, 5vw);
+    opacity: 0.8;
+}
+
+footer a img:hover {
+    opacity: 1;
+}
+
+/* Page content */
+
+section {
+    padding: 0 max(200px, 15vw);
+    margin: 75px 0 85px 0;
+}
+
+h1 {
+    font-family: "Vipnagorgialla";
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: -1.25;
+    filter: drop-shadow(-1px -1px 0px white) drop-shadow(1px -1px 0px white)
+        drop-shadow(-1px 1px 0px white) drop-shadow(1px 1px 0px white);
+}
+
+h2 {
+    font-family: "Agdasima";
+    color: white;
+    font-size: 3em;
+    margin: 0;
+}
+
+p,
+li {
+    font-family: "Agdasima";
+    color: white;
+    font-size: 1.7em;
+}
+
+.introduction-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.introduction-block img {
+    flex-basis: 40%;
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+.introduction-block p {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.download-link {
+    font-size: 125%;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.download-link:hover {
+    transform: scale(105%);
+}
+
+.gallery {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.centered-image {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.unglowing-image {
+    width: 20vw;
+}
+.glowing-image {
+    width: 20vw;
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+}
+
+.glowing-image:hover {
+    filter: drop-shadow(0px 0px 8px white);
+    transform: scale(101%);
+}
+
+.border {
+    position: relative;
+    outline: 12px solid white;
+    border-left: 6px solid black;
+    border-top: 6px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.aside-left,
+.aside-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 70px;
+}
+
+.aside-left img,
+.aside-right img {
+    flex-basis: 10%;
+    flex-grow: 1;
+}
+
+.aside-left div,
+.aside-right div {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.aside-right {
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.aside-left {
+    text-align: right;
+    flex-wrap: wrap-reverse;
+}
+
+.credits-section {
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body {
+        animation: scrolling 2s linear infinite;
+    }
+
+    @keyframes scrolling {
+        0% {
+            background-position:
+                right top,
+                left top,
+                right 48px top,
+                left 48px top,
+                center;
+        }
+        100% {
+            background-position:
+                right 176px,
+                left 176px,
+                right 48px top 88px,
+                left 48px top 88px,
+                center;
+        }
+    }
+
+    #navbar-logo {
+        transition: 0.1s ease-in-out;
+    }
+
+    .chaotix-font {
+        transition: 0.1s ease-in-out;
+    }
+
+    .download-link {
+        transition: 0.1s ease-out;
+    }
+
+    .glowing-image {
+        transition: 0.1s ease-out;
+    }
+}

@@ -1,3 +1,1 @@
-# Sonic-XG.github.io
-
-Webhook test
+# The official website for the Sonic XG fangame
